@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input, select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .controls {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Process Management Table</h2>
+
+    <!-- Controls for Global Selection -->
+    <div class="controls">
+        <label for="global-date">Select a Date: </label>
+        <input type="date" id="global-date" required>
+    </div>
+
+    <div class="controls">
+        <label for="global-site">Select a Site: </label>
+        <select id="global-site" required>
+            <option value="">-- Select a Site --</option>
+            <option value="Tis Hazari">Tis Hazari</option>
+            <option value="Rouse Avenue">Rouse Avenue</option>
+            <option value="Patiala House">Patiala House</option>
+            <option value="Dwarka">Dwarka</option>
+            <option value="Saket">Saket</option>
+            <option value="Karkardooma">Karkardooma</option>
+            <option value="Dheerpur">Dheerpur</option>
+            <option value="Rohini">Rohini</option>
+        </select>
+    </div>
+
+    <form id="processForm" action="#" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Date</th>
+                    <th>Site</th>
+                    <th>No of Manpower</th>
+                    <th>No of Files</th>
+                    <th>No of Images</th>
+                    <th>Backblocks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Collection/Barcoded & Preparation of Records</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Scanning</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>QC</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Flagging</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Indexing</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>CBSL QA</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Customer QA</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Customer QA Done</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>DMS Uploaded</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+                <tr>
+                    <td>Inventory Out</td>
+                    <td><input type="date" class="date-field" required></td>
+                    <td><input type="text" class="site-field" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                    <td><input type="number" required></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("global-date").addEventListener("change", function() {
+            let selectedDate = this.value;
+            document.querySelectorAll(".date-field").forEach(field => field.value = selectedDate);
+        });
+
+        document.getElementById("global-site").addEventListener("change", function() {
+            let selectedSite = this.value;
+            document.querySelectorAll(".site-field").forEach(field => field.value = selectedSite);
+        });
+
+
+
+
+document.getElementById("processForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let rows = document.querySelectorAll("tbody tr");
+    let url = "https://script.google.com/macros/s/AKfycbxfiKHfI4XCI3SF3AJa7befOgARu9UCtdy4LguygnAN44vgYZ7iL_62wP2PQEbtB-Ol/exec"; // Replace with your actual script URL
+
+    rows.forEach(row => {
+        let data = {
+            process: row.cells[0].innerText,
+            date: row.querySelector(".date-field").value,
+            site: row.querySelector(".site-field").value,
+            manpower: row.cells[3].querySelector("input").value,
+            files: row.cells[4].querySelector("input").value,
+            images: row.cells[5].querySelector("input").value,
+            backblocks: row.cells[6].querySelector("input").value
+        };
+
+        fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(result => console.log("Success:", result))
+        .catch(error => console.error("Error:", error));
+    });
+
+    alert("Data Submitted Successfully!");
+});
+
+    </script>
+
+</body>
+</html>
